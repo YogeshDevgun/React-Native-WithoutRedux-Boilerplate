@@ -5,7 +5,6 @@ import {
 } from 'react-native';
 import {StackNavigator} from "react-navigation";
 import OnBoardingScreen from "./screens/OnBoardingScreen";
-import Header from "./components/Header"; //Import the component file
 
 const RootStack = StackNavigator(
     {
@@ -18,6 +17,15 @@ const RootStack = StackNavigator(
     },
     {
         initialRouteName: 'Home',
+        navigationOptions: {
+            headerStyle: {
+                backgroundColor: '#26C0EE',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+                fontWeight: 'bold',
+            },
+        },
     }
 );
 

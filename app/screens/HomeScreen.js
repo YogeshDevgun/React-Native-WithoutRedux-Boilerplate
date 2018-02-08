@@ -7,7 +7,6 @@ import {
     Button,
     ActivityIndicator
 } from 'react-native';
-import Header from "../components/Header";
 
 export default class HomeScreen extends Component {
     constructor(props) {
@@ -16,16 +15,24 @@ export default class HomeScreen extends Component {
 
     static navigationOptions = {
         title: 'Home',
+        headerRight: (
+            <Button
+                onPress={() => alert('This is a button!')}
+                title="Info"
+                color="#fff"
+            />
+        ),
     };
+
 
     render() {
        return(
           <View>
-              <Header />
               <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                   <Text>Home Screen</Text>
               </View>
               <Button
+                  color="#5481FE"
                   title="Welcome Onboard"
                   onPress={() => this.props.navigation.navigate('OnBoard')}
               />
@@ -37,6 +44,10 @@ export default class HomeScreen extends Component {
 
 
 var styles = StyleSheet.create({
+
+    btn:{
+        fontSize: 43
+    },
     activityIndicatorContainer:{
         backgroundColor: "#fff",
         alignItems: 'center',

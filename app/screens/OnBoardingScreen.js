@@ -5,9 +5,14 @@ import {StyleSheet,
     Button} from 'react-native';
 
 export default class OnBoardingScreen extends Component {
-    static navigationOptions = {
-        title: 'OnBoarding',
+    static navigationOptions = ({ navigation }) => {
+        const { params } = navigation.state;
+
+        return {
+            title: params ? params.otherParam : 'A Nested Details Screen',
+        }
     };
+
 
     render(){
         return(
