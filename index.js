@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import dwell_withoutRedux from './app/App';
 
-AppRegistry.registerComponent('reactnative_withoutRedux', () => App);
+AppRegistry.registerComponent('reactnative_withoutRedux', () => dwell_withoutRedux);
